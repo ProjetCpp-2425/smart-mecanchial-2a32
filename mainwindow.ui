@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Smart Event Planner</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-20</y>
+      <width>1200</width>
+      <height>720</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Gestion_Vehicule">
+     <widget class="QLabel" name="Veh_Background1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>21</y>
+        <width>1200</width>
+        <height>700</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Resources/BG.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Veh_Title">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>20</y>
+        <width>350</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>LEMON MILK</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(38, 62, 102, 150);
+/*border-bottom-right-radius: 10px;*/
+border-bottom-left-radius: 10px;
+color: white;
+</string>
+      </property>
+      <property name="text">
+       <string>GESTION DES VEHICULES</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="Vehicule">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>28</y>
+        <width>1200</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabBar::tab {
+    background-color: rgba(38, 62, 102, 230);
+    color: #ffffff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 5px;
+}
+
+QTabBar::tab:disabled {
+    background-color: #656565;
+    color: #656565;
+}
+
+QTabWidget::pane {
+    background: transparent;
+}
+
+QTabBar::tab:selected {
+    background-color: rgba(77, 115, 176, 200);
+    color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-color: rgba(77, 115, 176, 250);
+    padding: 5px;
+}
+
+QTabBar::tab:selected:disabled {
+    background-color: #404040;
+    color: #656565;
+}
+
+QTabBar::tab:!selected {
+    background-color: rgba(38, 62, 102, 230);
+}
+
+QTabBar::tab:!selected:hover {
+    background-color: rgba(77, 115, 176, 100);
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last, QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+
+QTabBar::tab:left:selected {
+    border-left-color: none;
+}
+
+QTabBar::tab:right:selected {
+    border-right-color: none;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last, QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="Vehicules">
+       <attribute name="title">
+        <string>Gestion des Vehicules</string>
+       </attribute>
+       <widget class="QLabel" name="Veh_Background2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-36</y>
+          <width>1200</width>
+          <height>700</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/images/Resources/BG.jpg);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="Equipements_Infos">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>50</y>
+          <width>471</width>
+          <height>561</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {
+    background: rgba(38, 62, 102, 100);
+    border: 2px solid;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-color: rgba(38, 62, 102, 200);
+    margin-top: 22px;
+}
+
+QGroupBox::title {
+    background-color: rgba(38, 62, 102, 230);
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: white;  /* Adjust text color if necessary */
+}
+</string>
+        </property>
+        <property name="title">
+         <string>Vehicules Informations</string>
+        </property>
+        <widget class="QLineEdit" name="Veh_line_Marque">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>121</y>
+           <width>271</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgba(38, 62, 102, 230);
+		border: 2px solid rgba(38, 62, 102, 250);
+			border-radius: 10px;
+            color: white;
+}
+QLineEdit:hover {
+	background-color: rgba(77, 115, 176, 50);
+		border: 2px solid rgba(77, 115, 176, 200);
+			border-radius: 10px;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Veh_line_ID">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>70</y>
+           <width>271</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgba(38, 62, 102, 230);
+		border: 2px solid rgba(38, 62, 102, 250);
+			border-radius: 10px;
+            color: white;
+}
+QLineEdit:hover {
+	background-color: rgba(77, 115, 176, 50);
+		border: 2px solid rgba(77, 115, 176, 200);
+			border-radius: 10px;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_ID">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>70</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>ID</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_Marque">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>122</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Marque</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_Modele">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>176</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Modèle</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Veh_line_Modele">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>176</y>
+           <width>271</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgba(38, 62, 102, 230);
+		border: 2px solid rgba(38, 62, 102, 250);
+			border-radius: 10px;
+            color: white;
+}
+QLineEdit:hover {
+	background-color: rgba(77, 115, 176, 50);
+		border: 2px solid rgba(77, 115, 176, 200);
+			border-radius: 10px;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_Couleur">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>232</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Couleur</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_DateAchat">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>289</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Date</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_Etat">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>350</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>État</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Veh_line_Couleur">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>232</y>
+           <width>271</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgba(38, 62, 102, 230);
+		border: 2px solid rgba(38, 62, 102, 250);
+			border-radius: 10px;
+            color: white;
+}
+QLineEdit:hover {
+	background-color: rgba(77, 115, 176, 50);
+		border: 2px solid rgba(77, 115, 176, 200);
+			border-radius: 10px;
+}</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="Veh_combo_Etat">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>350</y>
+           <width>271</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #111;
+    selection-color: yellow;
+    color: white;
+    background-color: rgba(38, 62, 102, 230);
+    border-style: solid;
+    border: 1px solid #1e1e1e;
+    border-radius: 5;
+    padding: 1px 0px 1px 20px;
+}
+</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>En Service</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>En Maintenance</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Hors Service</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QDateEdit" name="Veh_dateEdit_DateVehicule">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>282</y>
+           <width>271</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDateEdit {
+    background-color: rgba(38, 62, 102, 230);
+    border: 2px solid rgba(38, 62, 102, 250);
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+
+QDateEdit::drop-down {
+    width: 20px;
+    background-color: rgba(77, 115, 176, 230);
+    border-left: 1px solid rgba(38, 62, 102, 250);
+}
+
+QDateEdit::down-arrow {
+    image: url(down_arrow_icon.png);  /* Replace with your custom arrow icon path */
+    width: 10px;
+    height: 10px;
+}
+
+QDateEdit:hover {
+    background-color: rgba(77, 115, 176, 50);
+    border: 2px solid rgba(77, 115, 176, 200);
+    border-radius: 10px;
+}
+</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_Parcours">
+         <property name="geometry">
+          <rect>
+           <x>21</x>
+           <y>404</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Parcours</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Veh_line_Parcours">
+         <property name="geometry">
+          <rect>
+           <x>141</x>
+           <y>406</y>
+           <width>271</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgba(38, 62, 102, 230);
+		border: 2px solid rgba(38, 62, 102, 250);
+			border-radius: 10px;
+            color: white;
+}
+QLineEdit:hover {
+	background-color: rgba(77, 115, 176, 50);
+		border: 2px solid rgba(77, 115, 176, 200);
+			border-radius: 10px;
+}</string>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="Veh_dateEdit_Dategarantie">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>455</y>
+           <width>271</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDateEdit {
+    background-color: rgba(38, 62, 102, 230);
+    border: 2px solid rgba(38, 62, 102, 250);
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+
+QDateEdit::drop-down {
+    width: 20px;
+    background-color: rgba(77, 115, 176, 230);
+    border-left: 1px solid rgba(38, 62, 102, 250);
+}
+
+QDateEdit::down-arrow {
+    image: url(down_arrow_icon.png);  /* Replace with your custom arrow icon path */
+    width: 10px;
+    height: 10px;
+}
+
+QDateEdit:hover {
+    background-color: rgba(77, 115, 176, 50);
+    border: 2px solid rgba(77, 115, 176, 200);
+    border-radius: 10px;
+}
+</string>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="Veh_dateEdit_Dateassurance">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>510</y>
+           <width>271</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDateEdit {
+    background-color: rgba(38, 62, 102, 230);
+    border: 2px solid rgba(38, 62, 102, 250);
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+
+QDateEdit::drop-down {
+    width: 20px;
+    background-color: rgba(77, 115, 176, 230);
+    border-left: 1px solid rgba(38, 62, 102, 250);
+}
+
+QDateEdit::down-arrow {
+    image: url(down_arrow_icon.png);  /* Replace with your custom arrow icon path */
+    width: 10px;
+    height: 10px;
+}
+
+QDateEdit:hover {
+    background-color: rgba(77, 115, 176, 50);
+    border: 2px solid rgba(77, 115, 176, 200);
+    border-radius: 10px;
+}
+</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_Dategarantie">
+         <property name="geometry">
+          <rect>
+           <x>16</x>
+           <y>460</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Date exp garantie</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Veh_label_Dateassurance">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>513</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Date exp assurance</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QComboBox" name="Veh_combo_ID_Main">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>140</y>
+          <width>201</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #111;
+    selection-color: yellow;
+    color: white;
+    background-color: rgba(38, 62, 102, 230);
+    border-style: solid;
+    border: 1px solid #1e1e1e;
+    border-radius: 5;
+    padding: 1px 0px 1px 20px;
+}
+</string>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </widget>
+       <widget class="QPushButton" name="Veh_push_Ajouter">
+        <property name="geometry">
+         <rect>
+          <x>690</x>
+          <y>190</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Veh_push_Modifier">
+        <property name="geometry">
+         <rect>
+          <x>870</x>
+          <y>190</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Veh_push_Supprimer">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>250</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Veh_Label_GestionInfo">
+        <property name="geometry">
+         <rect>
+          <x>703</x>
+          <y>70</y>
+          <width>291</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(38, 62, 102, 25);
+border: 2px solid rgba(38, 62, 102, 100);
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Veh_Cancel_Button">
+        <property name="geometry">
+         <rect>
+          <x>960</x>
+          <y>140</y>
+          <width>25</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/images/Resources/cancel.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Veh_push_dashboard">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>440</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Dashboard</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="connectButton">
+        <property name="geometry">
+         <rect>
+          <x>610</x>
+          <y>290</y>
+          <width>83</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>360</y>
+          <width>64</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelModel">
+        <property name="geometry">
+         <rect>
+          <x>1050</x>
+          <y>440</y>
+          <width>63</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Listes_Vehicules">
+       <attribute name="title">
+        <string>Listes des Vehicules</string>
+       </attribute>
+       <widget class="QLabel" name="Veh_Background3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-36</y>
+          <width>1200</width>
+          <height>700</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/images/Resources/BG.jpg);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Veh_push_TriID">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>541</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Trier par ID</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="Veh_line_Recherche">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>540</y>
+          <width>221</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	background-color: rgba(38, 62, 102, 230);
+		border: 2px solid rgba(38, 62, 102, 250);
+			border-radius: 10px;
+            color: white;
+}
+QLineEdit:hover {
+	background-color: rgba(77, 115, 176, 50);
+		border: 2px solid rgba(77, 115, 176, 200);
+			border-radius: 10px;
+}</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Veh_push_TriMarque">
+        <property name="geometry">
+         <rect>
+          <x>610</x>
+          <y>542</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Trier par Marque</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="Veh_TableView">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1201</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(38, 62, 102, 100);
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Veh_push_ExportPDF">
+        <property name="geometry">
+         <rect>
+          <x>1080</x>
+          <y>590</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Export PDF</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Veh_Label_ListeInfo">
+        <property name="geometry">
+         <rect>
+          <x>900</x>
+          <y>544</y>
+          <width>291</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(38, 62, 102, 25);
+border: 2px solid rgba(38, 62, 102, 100);
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Statistiques_3">
+       <attribute name="title">
+        <string>Statistiques</string>
+       </attribute>
+       <widget class="QLabel" name="Veh_Background5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-36</y>
+          <width>1200</width>
+          <height>700</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/images/Resources/BG.jpg);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Veh_label_Stats">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>0</y>
+          <width>1040</width>
+          <height>570</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Veh_push_UpdateStats">
+        <property name="geometry">
+         <rect>
+          <x>504</x>
+          <y>580</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Update Statistiques</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="Veh_push_Fermer">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>680</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat SemiBold</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color: rgba(38, 62, 102, 230);
+border-radius: 10px;
+color: white;
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 115, 176, 200), stop:1 rgba(26, 43, 71, 200));
+}</string>
+      </property>
+      <property name="text">
+       <string>Fermer</string>
+      </property>
+      <property name="shortcut">
+       <string>Esc</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

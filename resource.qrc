@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>Resources/GestionsBG.png</file>
+        <file>Resources/cancel.png</file>
+        <file>Resources/GestionBG.png</file>
+        <file>Resources/BG.jpg</file>
+    </qresource>
+</RCC>
