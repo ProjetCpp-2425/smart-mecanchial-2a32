@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddEmployeeForm</class>
+ <widget class="QDialog" name="AddEmployeeForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>537</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: white;
+}
+* {
+    font-family: &quot;Lexend Light&quot;;
+}
+QLineEdit, QComboBox, QDateEdit {
+    border: 1px solid #AAB7B8;
+    border-radius: 5px;
+    padding: 5px;
+}
+QDateEdit::up-arrow {
+    image: url(C:/Users/Omar/Documents/project/icons/collapse-arrow.png);
+    width: 16px;
+    height: 16px;
+	padding-top: 4px;
+}
+QDateEdit::down-arrow {
+    image: url(C:/Users/Omar/Documents/project/icons/expand-arrow.png);
+    width: 16px;
+    height: 16px;
+}
+QDateEdit::up-button {
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+QDateEdit::down-button {
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+QComboBox::down-arrow {
+    image: url(C:/Users/Omar/Documents/project/icons/expand-arrow.png);
+    width: 16px;
+    height: 16px;
+}
+QComboBox QAbstractItemView {
+	border: 1px solid #AAB7B8;
+    background-color: white;
+}
+QLabel {
+	font-family: &quot;Lexend Medium&quot;;
+    font-size: 9pt;
+    color: #2C3E50;
+}</string>
+  </property>
+  <widget class="QComboBox" name="roleComboBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>172</y>
+     <width>141</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Service Advisor</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Customer Service Representative</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Parts Specialist</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Fleet Manager</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Maintenance Scheduler</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>60</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Full Name</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="statusComboBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>376</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="currentText">
+    <string>Full-Time</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Full-Time</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Contract</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Team Shot</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>417</y>
+     <width>76</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Employee ID</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>497</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    font-family: &quot;Lexend Medium&quot;;
+    background-color: white;
+    color: #4a5eff;
+    border: 1px solid #4a5eff;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 11pt;
+}
+QPushButton:hover {
+    background-color: #f0f4ff;
+    color: #4a5eff;
+}
+QPushButton:pressed {
+    background-color: #4a5eff;
+    color: white;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>77</y>
+     <width>33</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Email</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="joinDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>308</y>
+     <width>98</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="scheduleComboBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>240</y>
+     <width>141</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>Morning Shift</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Night Shift</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="employeeIdLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>444</y>
+     <width>171</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Enter 6 Digits Employee ID</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveButton">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>497</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    font-family: &quot;Lexend Medium&quot;;
+    background-color: #4a5eff;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 11pt;
+}
+QPushButton:hover {
+    background-color: #6a7eff;
+}
+QPushButton:pressed {
+    background-color: #3a4edf;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Add Employee</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nameLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>36</y>
+     <width>211</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>145</y>
+     <width>25</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Role</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>213</y>
+     <width>53</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Schedule</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>281</y>
+     <width>58</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Join Date</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>349</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Status</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="emailLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>104</y>
+     <width>291</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
